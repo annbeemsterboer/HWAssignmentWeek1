@@ -21,6 +21,7 @@ function rest(hero) {
 rest(hero)
 
 function pickUpItem (yourHero, yourWeapon) { // ADD TO INVENTORY[0]
+    // const newWeapon = document.getElementById('dagger')
     hero.inventory.push(newWeapon)
 }
 
