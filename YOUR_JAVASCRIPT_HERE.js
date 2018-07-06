@@ -5,15 +5,10 @@ let hero = {
     heroic: true,
     inventory: [],
     health: 10,
-    weapon: [
-        {type: 'sword', damage: 2},
-    ]
+    weapon: {type: 'sword', damage: 2},
 }
 
 let newWeapon = {type: 'dagger', damage: 2}
-hero.weapon.push(newWeapon)
-// console.log(hero.weapon)
-
 
 function rest(hero) {
     while (hero.health < 10) {
@@ -25,12 +20,12 @@ function rest(hero) {
 
 rest(hero)
 
-function pickUpItem (yourHero, yourWeapon) {
-    hero.inventory.push(hero.weapon[0])
+function pickUpItem (yourHero, yourWeapon) { // ADD TO INVENTORY[0]
+    hero.inventory.push(newWeapon)
 }
 
-pickUpItem();
-// console.log(hero.inventory)
+pickUpItem(hero, dagger);
+console.log(hero.inventory)
 
 
 // function equipWeapon(yourHero) {
