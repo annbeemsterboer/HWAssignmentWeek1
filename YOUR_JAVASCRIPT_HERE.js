@@ -33,3 +33,13 @@ function equipWeapon(yourHero) {
 }
 
 equipWeapon(hero)
+
+function displayStats() {
+    const theHero = document.createElement("stats")
+    const theStats = document.createTextNode(hero)
+    theHero.appendChild(theStats);
+
+    const existingElement = document.getElementById("herostats");
+    existingElement.appendChild(theHero)
+    console.log(theHero)
+}
