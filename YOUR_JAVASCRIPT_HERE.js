@@ -24,13 +24,11 @@ function pickUpItem (yourHero, yourWeapon) { // ADD TO INVENTORY[0]
     hero.inventory.push(newWeapon)
 }
 
-pickUpItem(hero, dagger);
 console.log(hero.inventory)
 
 
-// function equipWeapon(yourHero) {
-//     hero.inventory.unshift(hero.weapon)
-//     // console.log('weapon equiped')
-// }
+function equipWeapon(yourHero) {
+    hero.weapon = hero.inventory[0]
+}
 
-// equipWeapon(hero)
+equipWeapon(hero)
