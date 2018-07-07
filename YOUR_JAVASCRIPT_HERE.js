@@ -1,14 +1,12 @@
-// Write your JS here
+
 
 let hero = {
     name: 'Superman',
     heroic: true,
     inventory: [],
     health: 10,
-    weapon: {type: 'sword', damage: 2},
+    weapon: {type: 'gun', damage: 2},
 }
-
-let newWeapon = {type: 'dagger', damage: 2}
 
 function rest(hero) {
     while (hero.health < 10) {
@@ -20,12 +18,13 @@ function rest(hero) {
 
 rest(hero)
 
+let newWeapon = {type:'dagger', damage: 2}
+
 function pickUpItem (yourHero, yourWeapon) { // ADD TO INVENTORY[0]
-    // const newWeapon = document.getElementById('dagger')
     hero.inventory.push(newWeapon)
 }
 
-console.log(hero.inventory)
+// console.log(hero.inventory)
 
 
 function equipWeapon(yourHero) {
@@ -35,11 +34,14 @@ function equipWeapon(yourHero) {
 equipWeapon(hero)
 
 function displayStats() {
-    const theHero = document.createElement("stats")
-    const theStats = document.createTextNode(hero)
-    theHero.appendChild(theStats);
+    const newDiv = document.createElement("div")
+    const newContent = document.createTextNode(`Your hero's name is ${hero.name}. Is he heroic? ${hero.heroic} He holds ${hero.inventory} and currently uses ${hero.weapon}. His health is ${hero.health}.`)
+    newDiv.appendChild(newContent);
+    console.log(newDiv)
 
     const existingElement = document.getElementById("herostats");
-    existingElement.appendChild(theHero)
-    console.log(theHero)
+    existingElement.appendChild(newDiv)
+    // console.log(theHero)
 }
+
+displayStats()
