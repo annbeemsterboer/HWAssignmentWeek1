@@ -24,7 +24,7 @@ function pickUpItem (yourHero, yourWeapon) { // ADD TO INVENTORY[0]
     hero.inventory.push(newWeapon)
 }
 
-// console.log(hero.inventory)
+console.log(hero.inventory)
 
 
 function equipWeapon(yourHero) {
